@@ -41,6 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
+    'django_extensions',
+    'rest_framework',
+    'corsheaders',
+    'ckeditor',
+    'bootstrap5',
+    'jinja2',
+    'eastore',
 ]
 
 MIDDLEWARE = [
