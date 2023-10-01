@@ -16,8 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from eastore.views import *
+from django.conf.urls.static import static
+from mysite import settings
+from rest_framework import routers
+
+router_s = routers.DefaultRouter()
+router_s.register(r'license/(?P<mt_account>[^/.]+)', LicenseViewSet, basename="license")
+print(router_s.urls)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("eastore.urls")),
+    path('api/v1/', include(router_s.urls)),
 ]
+
